@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Royalty">
-        <xpath>Defs/HediffDef[defName="LearningAssistant"]/stages/li/statOffsets</xpath>
-        <value><LearningRateFactor>0.2</LearningRateFactor></value>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[defName="LearningAssistant"]/stages/li/statOffsets</xpath>
+            <value>
+                <LearningRateFactor>0.2</LearningRateFactor>
+            </value>
+        </match>
     </Operation>
 
-    <Operation Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Ideology">
-        <xpath>Defs/HediffDef[defName="NeuralSupercharge"]/stages/li/statOffsets</xpath>
-        <value><LearningRateFactor>0.25</LearningRateFactor></value>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[defName="NeuralSupercharge"]/stages/li/statOffsets</xpath>
+            <value>
+                <LearningRateFactor>0.25</LearningRateFactor>
+            </value>
+        </match>
     </Operation>
 </Patch>
